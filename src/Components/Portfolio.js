@@ -3,6 +3,7 @@
 // Form to add, update and delete projects, contained in a Project Form Component.
 import React from 'react'
 import ProjectCard from '../Components/ProjectCard';
+import SkillCard from './SkillCard';
 
 
 function Portfolio() {
@@ -13,6 +14,7 @@ function Portfolio() {
                 <h1>Portfolio</h1>
                 <p>This is my portfolio page.</p>
                 <ProjectCard/>
+                <SkillCard/>
               </div>
             );
  }
