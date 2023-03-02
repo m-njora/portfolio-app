@@ -1,11 +1,24 @@
-import Header from '../Components/Header';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from '../Components/Navbar'
+import Home from '../Components/Home';
+import Portfolio from '../Components/Portfolio';
+import Skills from '../Components/Skills';
+import Login from '../Components/Login';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      {/* other components and code */}
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/portfolio" component={Portfolio} />
+          <Route path="/skills" component={Skills} />
+          <Route path="/login" component={Login} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
